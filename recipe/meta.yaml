@@ -1,18 +1,18 @@
 {% set name = "museotoolbox" %}
-{% set version = "0.13.2" %}
+{% set version = "0.13.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 3b1b0338af445e152d1e51e77f85c69c9b1d325a8cadcc378992e1b80fc0cb46
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4855649b5fa4334c61c1fa05547995b4553c5810b0be4f8df9a684ef2051e6f5
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -42,11 +42,11 @@ test:
     - test
 
 about:
-  home: "https://github.com/nkarasiak/MuseoToolBox"
+  home: https://github.com/nkarasiak/MuseoToolBox
   license: GPL-3.0-or-later
   license_family: GPL
   license_file: license.txt
-  summary: "Raster and vector tools for Remote Sensing and Classification"
+  summary: Raster and vector tools for Remote Sensing and Classification
   doc_url: https://museotoolbox.readthedocs.io
   dev_url: https://github.com/nkarasiak/MuseoToolBox/
 
