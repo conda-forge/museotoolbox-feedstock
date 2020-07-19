@@ -1,5 +1,5 @@
 {% set name = "museotoolbox" %}
-{% set version = "0.13.5" %}
+{% set version = "0.13.6" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 12765398427e4fccbc192d4fe8735f5e33995ae60fc8cdebe30efbdcc6882f95
+  sha256: 7fc8e935f008501fbf992d2da7e4b9bfe27492d23d8f424bdb6b163e31da422d
 
 build:
   noarch: python
