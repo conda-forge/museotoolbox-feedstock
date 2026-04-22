@@ -11,24 +11,26 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
     - gdal >=2
     - joblib
     - psutil
     - matplotlib-base
     - numpy >=1.7
-    - python
+    - python >={{ python_min }}
     - scikit-learn
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - metadata
     - museotoolbox
